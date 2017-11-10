@@ -60,13 +60,13 @@ public class main_1 {
   }
 
   @SuppressWarnings("unused")
-  public static String randgo(Graph T, int n, int from) {
+  public static String randomWalk(Graph T, int n, int from) {
     int i, k = 0;
     java.util.Random r = new java.util.Random();
     int[] path = new int[n];
     String result = new String();
     for (i = 0; i < T.num; i++) {
-      if (T.G[from][i] != 0)// &&T.visited[from][i]==0
+      if (T.G[from][i] != 0) // &&T.visited[from][i]==0
       {
         path[k++] = i;
       }
@@ -86,13 +86,13 @@ public class main_1 {
     return result;// +randgo(T,n,path[to]);
   }
 
-  public static String randomWalk(Graph T, String start) {
-    int from;
-    String result = new String();
-    from = T.s_to_int.get(start);
-    result = randgo(T, T.num, from);
-    return T.int_to_s.get("" + from) + " " + result;
-  }
+//  public static String randomWalk(Graph T, String start) {
+//    int from;
+//    String result = new String();
+//    from = T.s_to_int.get(start);
+//    result = randgo(T, T.num, from);
+//    return T.int_to_s.get("" + from) + " " + result;
+//  }
 
   public static void showDirectedGraph(Graph T) {
     String type = "gif";

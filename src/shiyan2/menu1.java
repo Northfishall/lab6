@@ -234,6 +234,7 @@ public class menu1 implements ActionListener {
           T.visited[i][j] = 0;
         }
       }
+      //初始化表示线的矩阵
       java.util.Random r = new java.util.Random();
       x = (r.nextInt(T.num));
       start.setText(T.int_to_s.get("" + x));
@@ -248,7 +249,7 @@ public class menu1 implements ActionListener {
       // String result=main_1.randomWalk(T,start.getText().toLowerCase());
       // ran_go.setText(result);
     } else if (e.getSource() == next) {
-      String s = main_1.randgo(T, T.num, x);
+      String s = main_1.randomWalk(T, T.num, x);
       if (s == null) {
         ran_go.setText(ran_go.getText() + " No words");
         next.setVisible(false);

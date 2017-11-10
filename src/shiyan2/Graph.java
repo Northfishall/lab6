@@ -47,7 +47,7 @@ public class Graph {
     }
     int numl = j + 1;
     in.close();
-    j = 0;
+    j = 0;  //j为对应的数字
     for (i = 0; i < numl; i++) {
       if (!s_to_int.containsKey(ch[i])) {
         // 大小写功能的设定：
@@ -67,6 +67,12 @@ public class Graph {
     }
     for (i = 0; i < numl - 1; i++) {
       G[s_to_int.get(ch[i])][s_to_int.get(ch[i + 1])]++;
+    }
+    for (i= 0 ;i <numl-1 ; i++)
+    {
+        System.out.print(i);
+        System.out.print(int_to_s.get(""+ i));
+        System.out.println("");
     }
   }
 }
